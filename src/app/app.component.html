@@ -1,0 +1,73 @@
+
+
+<div class="container">
+    <div class="row">
+  
+  <div class= "col-sm-12 custom-container jumbotron">
+    <form class="form-horizontal" (ngSubmit)="randomize()">
+
+
+        <fieldset>
+          <div class="row">
+            <div class= "col-sm-3"> 
+              <div class="form-group">
+                <label for="inputStatrtime">Start Time</label>
+                <input type="time" atp-time-picker id="starttime" value="" name="starttime" onlyHour="true" onlyAM='true' />
+                
+              </div>
+            </div>
+             <div class= "col-sm-3"> 
+              <div class="form-group">
+                <label for="inputEndtime">End Time</label>
+                <input type="time" atp-time-picker id="endtime" value="" name="starttime" onlyHour="true" onlyAM='true' />
+              </div>
+            </div>
+            <div class= "col-sm-3"> 
+              <div class="form-group">
+              <label for="select">SYM</label>
+                <select id="select">
+                  <option>MSFT</option>
+                  <option>SPY</option>
+                  <option>GE</option>
+                </select>
+            </div>
+            </div>
+            
+            
+             
+            
+             
+           
+            <div class="form-group">
+                
+                <button type="submit" class="btn btn-primary" >Submit</button>
+                </div>
+                </div>
+            
+        </fieldset>
+    </form>
+
+</div>
+</div>
+</div>
+
+<div class="container">
+    <div class="row">
+  
+  <div class= "col-sm-12 custom-container jumbotron">
+<div style="display: block">
+    <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+  </div>
+<p class="time">Time</p>
+</div>
+
+
+</div>
+</div>
